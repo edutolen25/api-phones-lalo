@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="shortcut icon" href="https://laliteradice.files.wordpress.com/2023/04/imagen-6.png?w=1024" />
+    <title>iPhone Store</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            padding-top: 20px;
+            background-color: #292c2f;
+            color: #bbb;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer img {
+            width: 30px;
+            margin: 0 5px;
+        }
+
+        .iphone-logo {
+            display: block;
+            margin: 0 auto;
+            width: 100px; /* Ajusta el tamaño según tus necesidades */
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page" >
+        <div data-role="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1200px-Apple_logo_black.svg.png" alt="iPhone Logo" class="iphone-logo">
+            <h1>iPhone Store</h1>
+            <div data-role="navbar" data-iconpos="left">
+                <ul>
+                    <li><a href="/" data-icon="home" class="ui-btn-active">Home</a></li>
+                    <li><a href="/phones/products" data-icon="phone">Phones</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" >
+            <form action="/" method="POST">
+                <label for="serialNumber">Serial Number:</label>
+                <input type="text" name="serialNumber" id="serialNumber" placeholder="Serial Number" required>
+
+                <label for="model">Model:</label>
+                <input type="text" name="model" id="model" placeholder="Model" required>
+
+                <label for="price">Purchase Price:</label>
+                <input type="number" name="price" id="price" placeholder="Purchase Price" required>
+
+                <label for="cost">Selling Price:</label>
+                <input type="number" name="cost" id="cost" placeholder="Selling Price" required>
+
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <legend>type of phone:</legend>
+                    <input type="radio" name="size" id="radio-choice-c" value="normal" checked>
+                    <label for="radio-choice-c">normal</label>
+
+                    <input type="radio" name="size" id="radio-choice-m" value="Pro">
+                    <label for="radio-choice-m">Pro</label>
+
+                    <input type="radio" name="size" id="radio-choice-g" value="Pro Max">
+                    <label for="radio-choice-g">Pro Max</label>
+                </fieldset>
+
+                <label for="stock">Stock:</label>
+                <input type="number" name="stock" id="stock" placeholder="Stock" required>
+
+                <label for="status">Active:</label>
+                <select name="status" id="status" data-role="slider">
+                    <option value="0">No &#128369;</option>
+                    <option value="1">Yes &#128374;</option>
+                </select>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div data-role="footer">
+            <h4>Developed by EduDev</h4>
+        </div>
+    </div>
+</body>
+
+</html>
